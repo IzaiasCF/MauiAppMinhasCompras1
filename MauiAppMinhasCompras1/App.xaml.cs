@@ -1,4 +1,5 @@
 ﻿using MauiAppMinhasCompras1.Helpers;
+using System.Globalization;
 
 namespace MauiAppMinhasCompras1
 {
@@ -24,6 +25,8 @@ namespace MauiAppMinhasCompras1
         public App()
         {
             InitializeComponent();
+
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("pt-BR");
 
             //MainPage = new AppShell();
             MainPage = new NavigationPage(new Views.ListaProduto());
